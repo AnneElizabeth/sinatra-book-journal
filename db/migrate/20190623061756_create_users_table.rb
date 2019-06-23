@@ -4,6 +4,8 @@ class CreateUsersTable < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string password_digest #allows encryption using bcrypt
+
+      t.timestamps null: false
     end
   end
 end
