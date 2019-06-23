@@ -1,6 +1,9 @@
 class CreateJournalEntries < ActiveRecord::Migration
   def change
     create_table :journal_entries do |t|
+      t.string :content
+      t.string :book_title
+      t.integer :user_id
 
       t.timestamps null: false
     end
