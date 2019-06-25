@@ -22,13 +22,37 @@ class UsersController < ApplicationController
       end
     end
 
+    #this route renders sign up form
     get '/signup' do
-
+      erb :signup
     end
 
-    #user SHOW route
+    #creates new user and persists data to db
+    post '/users' do
+      #only want to persist user with username, email, password
+      if params[:name] != "" && params[:email] != "" && params[:password] != ""
+        @user = User.create(params)
+        session[:user_id] = @user.id #logging user in
+        #use redirect v. render because redirect
+        #sends get request, separation of concerns,
+        #job isn't to show new user but send to route that does that
+        #get route, not post route
+        redirect "/users/#{@user.id}"
+        erb :'/users/show'
+      else
+        #not valid input
+        redirect '/signup' #should include an error msg or create a failure/error page
+      end
+    end
+
+    #user landing page route
     get '/users/:id' do
-      'This is the user show route.'
+      @user = User.find_by(id: params[:id])
+      erb :'/users/show'
     end
 
+    get '/logout' do
+      session.clear #logs user out
+      redirect '/' #redirect to home page
+    end
 end
