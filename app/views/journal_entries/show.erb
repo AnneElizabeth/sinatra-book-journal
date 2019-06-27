@@ -1,2 +1,4 @@
 <h3><%= @journal_entry.book_title %></h3>
 <p><%= @journal_entry.content %></p>
+<a href="/journal_entries/<%= @journal_entry.id %>/edit">Edit Entry</a>
+<a href="/journal_entries/<%= @journal_entry.id %>/delete">Delete Entry</a>

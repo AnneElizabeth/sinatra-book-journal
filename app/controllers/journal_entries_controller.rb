@@ -26,5 +26,10 @@ class JournalEntriesController < ApplicationController
         erb :'journal_entries/show'
     end
 
+    #edit and delete routes
+    get '/journal_entries/:id/edit' do
+        erb :'/journal_entries/edit'
+    end
+
     #index route for all journal entries
 end
