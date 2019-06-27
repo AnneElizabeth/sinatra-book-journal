@@ -2,7 +2,11 @@ class UsersController < ApplicationController
 
     #routes needed for login
     get '/login' do #renders the login page/form
-      erb :login
+      if logged_in?
+        redirect "/users/#{current_user.id}"
+      else
+        erb :welcome
+      end
     end
 
     post '/login' do #creating session: receiving login form, find user, and log user in
@@ -56,4 +60,4 @@ class UsersController < ApplicationController
       session.clear #logs user out
       redirect '/' #redirect to home page
     end
-end
+  end
