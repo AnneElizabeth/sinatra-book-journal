@@ -21,7 +21,7 @@ class JournalEntriesController < ApplicationController
     end
 
     #show route for journal entries
-    
+
 
     #index route for all journal entries
 end
