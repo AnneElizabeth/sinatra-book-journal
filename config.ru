@@ -9,4 +9,5 @@ use Rack::MethodOverride
 
 #mount controllers here
 use UsersController
+use JournalEntriesController
 run ApplicationController
