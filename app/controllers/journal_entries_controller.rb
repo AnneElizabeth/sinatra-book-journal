@@ -20,8 +20,11 @@ class JournalEntriesController < ApplicationController
         end
     end
 
-    #show route for journal entries
-
+    #dynamic route for journal entries
+    get '/journal_entries/:id' do
+        @journal_entry = JournalEntry.find(params[:id])
+        erb :'journal_entries/show'
+    end
 
     #index route for all journal entries
 end
