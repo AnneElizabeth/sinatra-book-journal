@@ -6,11 +6,22 @@ class JournalEntriesController < ApplicationController
     end
 
     #post new journal entry
-    post 'journal_entries' do
-    
+    post '/journal_entries' do
+        #create new entry and save to database (if it has content and user logged in)
+        if !logged_in? 
+            redirect '/'
+        else
+            if params[:content] || params[:book_title] != ""
+                @journal_entry = JournalEntry.create(content: params[:content], book_title: params[:book_title], user_id: current_user.id)
+                redirect "/journal_entries/#{@journal_entry.id}"
+            else
+                redirect '/journal_entries/new'
+            end
+        end
     end
 
-    #show route for journal page
+    #show route for journal entries
+    
 
     #index route for all journal entries
 end
