@@ -15,14 +15,16 @@
   </head>
   <body>
     <div style="margin: 20px 40px;">
-      <a href="/logout" style="margin-right: 20px;">Log Out</a>
-      <a href="/journal_entries" style="margin-right: 20px;">All Journal Entries</a>
-      <a href="/journal_entries/new">New Journal Entry</a>
+      <% if logged_in? %>
+        <a href="/logout" style="margin-right: 20px;">Log Out</a>
+        <a href="/journal_entries" style="margin-right: 20px;">All Journal Entries</a>
+        <a href="/journal_entries/new">New Journal Entry</a>
+      <% end %>
     </div>
 
         <%= yield %>
 
-      <footer class="branding">
+      <footer class="branding" style="margin-left: 40px;">
         <small>&copy; 2019 <strong>Sinatra Book Journal</strong></small>
       </footer>
     </div>
