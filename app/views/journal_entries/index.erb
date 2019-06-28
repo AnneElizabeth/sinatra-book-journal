@@ -1,1 +1,14 @@
-INDEX PAGE FOR JOURNAL ENTRIES
+<div style="margin: 20px 40px;">
+    <h2>My Journal</h2>
+    <div style="margin:10px;"
+    <% @journal_entries.each do |journal_entry| %>
+        <h5><%= journal_entry.created_at %></h5>
+        <h4><a href="/journal_entries/<%= journal_entry.id %>"><%= journal_entry.book_title %></a></h4>
+        <p><%= journal_entry.content %></p>
+        <p>By <%= journal_entry.id %></p>
+        <br />
+        <hr />
+        <br />
+    <% end %>
+    </div>
+</div>
