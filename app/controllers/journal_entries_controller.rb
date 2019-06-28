@@ -1,4 +1,10 @@
 class JournalEntriesController < ApplicationController
+
+    #display all journal entries
+    get '/journal_entries' do
+        @journal_entries = JournalEntry.all
+        erb :'journal_entries/index'
+    end
     
     #form for new journal entry/get requests show something that exists
     get '/journal_entries/new' do
