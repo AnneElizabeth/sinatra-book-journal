@@ -60,7 +60,15 @@ class JournalEntriesController < ApplicationController
         end
     end
 
-    #index route for all journal entries
+    delete '/journal_entries/:id' do
+        find_entry
+        if @journal_entry.user == current_user
+            @journal_entry.destroy
+            redirect '/journal_entries'
+        else
+            redirect '/journal_entries'
+        end
+    end
 
     #helper method to prevent code duplication
     private #this method will only be used here
