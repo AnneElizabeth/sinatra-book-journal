@@ -21,8 +21,7 @@ class UsersController < ApplicationController
         puts session
         redirect "users/#{@user.id}"
       else
-        #tell user credentials are invalid
-        #redirect them to login page
+        redirect 'signup'
       end
     end
 
