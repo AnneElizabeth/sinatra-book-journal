@@ -1,17 +1,17 @@
-# Sinatra Book Journal
+# Get Lit | Digital Reading Journal
 
-Sinatra Book Journal app users can record books they have read, their feedback about each book, and view books and feedback from other users.
+Get Lit app users can record books they have read, their feedback about each book, and view books and feedback from other users.
 
 #Features
 
-The Sinatra Book Journal app allows users to:
+The Get Lit app allows users to:
  - Sign up with a unique username, email, and password
  - Log in using their unique email and password.
  - Log out
  - Create, read, update, and delete multiple journal entries, each with a book title and a content area to record their feedback/thoughts about each book.
  - View the book titles and feedback entered by other app users.
 
- Sinatra Book Journal app users can not:
+ While using the Get Lit app, users can not:
  - Modify or delete the entries of other users
  - Create empty journal entries
 
