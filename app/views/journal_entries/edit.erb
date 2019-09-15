@@ -1,13 +1,10 @@
-<div style="margin: 20px 40px;">
-
-<h2>Edit your entry.</h2>
+<h2>Edit a Journal Entry</h2>
 
 <form class="" action="/journal_entries/<%= @journal_entry.id %>" method="post">
   <input type="hidden" name="_method" value="patch">
-  <label for="book_title">Book Title: </label>
+  <label for="book_title"><h4>Book Title:</h4> </label>
   <textarea name="book_title" style="width:auto; height:auto; padding:5px;"><%= @journal_entry.book_title %></textarea>
-  <label for="content">Entry: </label>
-  <textarea name="content" style="width:auto; height:auto; padding:5px;"><%= @journal_entry.content %></textarea>
-  <input type="submit" value="Edit Entry">
+  <label for="content"><h4>Entry:</h4> </label>
+  <textarea name="content" style="width:auto; height:auto; padding:5px;"><%= @journal_entry.content %></textarea><br />
+  <input class="btn" type="submit" value="Edit Entry">
 </form>
-</div>

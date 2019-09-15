@@ -1,12 +1,14 @@
-<div class="container" style="margin: 20px 40px;">
+<h2>Welcome Back to Your Reading Journal</h2>
+<p>To view your reading journal, please log in.</p>
 
-<h3>Please log in.</h3>
+<% if @error %>
+    <p class="error">Incorrect email or password. Please try again.</p>
+<% end %>
 
 <form class="" action="/login" method="post">
-  <label for="email">Email: </label>
-  <input type="text" name="email" value="">
-  <label for="password">Password: </label>
-  <input type="text" name="password" value="">
-  <input type="submit" value="Log In">
+  <label for="email"><h4>Email:</h4> </label>
+  <input type="text" name="email" value=""><br /><br />
+  <label for="password"><h4>Password:</h4> </label>
+  <input type="text" name="password" value=""><br />
+  <input class="btn" type="submit" value="Log In">
 </form>
-</div>

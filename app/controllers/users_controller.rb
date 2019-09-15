@@ -51,7 +51,6 @@ class UsersController < ApplicationController
     #user landing page route
     get '/users/:id' do
       @user = User.find_by(id: params[:id])
-      #@user.journal_entries.create(book_title: params[:book_title], content: params[:content], user_id: current_user.id)
       erb :'/users/show'
     end
 

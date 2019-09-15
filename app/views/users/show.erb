@@ -1,4 +1,5 @@
-<div style="margin: 20px 40px;">
-    <h2><%= @user.name %>'s Landing Page</h2>
-    <h3>Hi <%= @user.name %>! You are now logged in.</h3>
-    </div>
+<h2><%= @user.name %>'s Reading Journal</h2>
+    <p>Welcome <%= @user.name %>! You are now logged in.</p>
+    <a class="btn" href="/journal_entries" style="margin-right: 40px;">View All Entries</a>
+    <a class="btn" href="/journal_entries/new" style="margin-right: 40px;">Create New Entry</a>
+    <a class="btn" href="/logout">Log Out</a>

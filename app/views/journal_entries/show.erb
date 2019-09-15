@@ -1,13 +1,10 @@
-<div style="margin-left: 40px;">
-<h2>Journal Entry</h2>
 <h3><%= @journal_entry.book_title %></h3>
 <p><%= @journal_entry.content %></p>
 
 <% if current_user == @journal_entry.user %>  
-        <p><a style="margin-bottom: 35px;" href="/journal_entries/<%= @journal_entry.id %>/edit">Edit Entry</a></p>
-        <form class="" action="/journal_entries/<%= @journal_entry.id %>" method="post">
-            <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" name="" value="Delete Journal Entry">
-        </form>
-    <% end %>
-</div>
+    <p><a class="btn" href="/journal_entries/<%= @journal_entry.id %>/edit">Edit Entry</a></p>
+    <form class="" action="/journal_entries/<%= @journal_entry.id %>" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <input class="btn" type="submit" name="" value="Delete Entry">
+    </form>
+<% end %>

@@ -1,0 +1,108 @@
+body {
+    margin: 0 auto;
+    color: #333;
+  }
+
+a {
+    color: #333;
+}
+
+a:visited {
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    margin: 2% 6%;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-size: 1.0rem;
+    margin-bottom: 18px;
+}
+
+a.btn, input.btn {
+    background-color: #fff;
+    border: #333 1px solid;
+    color: #333;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    min-width: 25px;
+    margin-top: 25px;
+}
+
+.btn:hover {
+    background-color:#333;
+    border: #333 1px solid;
+    color: #fff;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    min-width: 25px;
+}
+
+.nav {
+    margin-left: -40px;
+    margin-bottom: 75px;
+}
+
+.nav ul {
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav li {
+    display: inline;
+    margin-right: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size; 10px;
+    font-size: 1.0rem;
+}
+
+a.active {
+    font-style: italic;
+    text-decoration: none;
+  }
+
+.error {
+    color: red;
+}
