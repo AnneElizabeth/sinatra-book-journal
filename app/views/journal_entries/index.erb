@@ -1,14 +1,33 @@
-<div style="margin: 20px 40px;">
-    <h2>My Journal</h2>
-    <div style="margin:10px;"
-    <% @journal_entries.each do |journal_entry| %>
-        <h5><%= journal_entry.created_at %></h5>
-        <h4><a href="/journal_entries/<%= journal_entry.id %>"><%= journal_entry.book_title %></a></h4>
-        <p><%= journal_entry.content %></p>
-        <p>By <%= journal_entry.id %></p>
-        <br />
-        <hr />
-        <br />
-    <% end %>
+<!doctype html>
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    <title>Get Lit | A Reading Journal</title>
+    <meta name="description" content="Get Lit is the only digital reading journal you'll ever need.">
+    <meta name="author" content="A. Edmondson">
+
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+    <div class="container">
+        <h2>Journal Entries</h2>
+        <div style="margin:10px;"
+        <% @journal_entries.each do |journal_entry| %>
+            <h5><%= journal_entry.created_at %></h5>
+            <h4><a href="/journal_entries/<%= journal_entry.id %>"><%= journal_entry.book_title %></a></h4>
+            <p><%= journal_entry.content %></p>
+            <p>By <%= journal_entry.id %></p>
+            <br />
+            <hr />
+            <br />
+        <% end %>
+        </div>
     </div>
-</div>
+
+    </body>
+</html>
+
