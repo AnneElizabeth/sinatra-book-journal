@@ -1,0 +1,10 @@
+<h2><%= @current_user.name %>'s Reading Journal Entries</h2>
+    <% @user_entries.each_with_index do |user_entry|%>
+        <p><%= user_entry.created_at %></p>
+        <h3><a href="/journal_entries/<%= user_entry.id %>"><%= user_entry.book_title %></a></h3>
+        <p><%= user_entry.content %></p>
+        <p>By <%= user_entry.id %></p>
+        <br />
+        <hr />
+        <br />
+    <% end %>

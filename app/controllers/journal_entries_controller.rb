@@ -5,6 +5,13 @@ class JournalEntriesController < ApplicationController
         @journal_entries = JournalEntry.all
         erb :'journal_entries/index'
     end
+
+    #display only user entries
+    get '/journal_entries/user_entries' do
+        @user_entries = current_user.journal_entries
+        erb :'/journal_entries/user_entries'
+    end
+
     
     #form for new journal entry/get requests show something that exists
     get '/journal_entries/new' do
